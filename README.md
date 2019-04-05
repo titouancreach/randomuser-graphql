@@ -4,7 +4,6 @@
 
 ```bash
 $ yarn build
-$ yarn run
 ```
 
 # Dev (hot reload)
@@ -12,3 +11,7 @@ $ yarn run
 ```bash
 $ yarn start
 ```
+
+# Playground
+
+https://mystifying-kepler-2696d4.netlify.com/.netlify/functions/graphql
