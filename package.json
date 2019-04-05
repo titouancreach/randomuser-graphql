@@ -16,9 +16,7 @@
     "graphql": "^14.2.1",
     "netlify-lambda": "^1.4.3",
     "node-fetch": "^2.3.0",
-    "typescript": "^3.4.1"
-  },
-  "devDependencies": {
+    "typescript": "^3.4.1",
     "@types/graphql": "^14.2.0",
     "tsc-watch": "^2.1.2"
   }
