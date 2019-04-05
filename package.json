@@ -1,0 +1,16 @@
+{
+  "name": "randomioproxy",
+  "version": "1.0.0",
+  "main": "index.ts",
+  "author": "titouancreach <titouan.creach@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "tsc-watch --onSuccess \"node dist/index.js\""
+  },
+  "dependencies": {
+    "typescript": "^3.4.1"
+  },
+  "devDependencies": {
+    "tsc-watch": "^2.1.2"
+  }
+}
