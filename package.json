@@ -5,12 +5,18 @@
   "author": "titouancreach <titouan.creach@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "start": "tsc-watch --onSuccess \"node dist/index.js\""
+    "start": "tsc-watch --onSuccess \"node -r dotenv/config dist/index.js\""
   },
   "dependencies": {
+    "dotenv": "^7.0.0",
+    "express": "^4.16.4",
+    "express-graphql": "^0.7.1",
+    "graphql": "^14.2.1",
     "typescript": "^3.4.1"
   },
   "devDependencies": {
+    "@types/express": "^4.16.1",
+    "@types/express-graphql": "^0.6.2",
     "tsc-watch": "^2.1.2"
   }
 }
