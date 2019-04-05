@@ -1,5 +1,5 @@
 import { makeExecutableSchema } from "graphql-tools";
-import { ApolloServer, gql } from "apollo-server";
+import { ApolloServer, gql } from "apollo-server-lambda";
 import { importSchema } from "graphql-import";
 import fetch from "node-fetch";
 
@@ -21,13 +21,9 @@ const resolvers = {
   }
 };
 
-const schema = makeExecutableSchema({
+const server = new ApolloServer({
   typeDefs,
   resolvers
 });
 
-const server = new ApolloServer({ typeDefs, resolvers });
-
-server.listen({ port: process.env.PORT }).then(({ url }) => {
-  console.log(`🚀 Running on ${url}`);
-});
+export const handler = server.createHandler();

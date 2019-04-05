@@ -5,17 +5,18 @@
   "author": "titouancreach <titouan.creach@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "start": "tsc-watch --onSuccess \"node -r dotenv/config dist/index.js\"",
-    "build": "tsc",
-    "run": "node -r nodeenv/config dist/index.js"
+    "start": "tsc-watch --onSuccess \"netlify-lambda serve dist/\"",
+    "build": "tsc && netlify-lambda build dist/"
   },
   "dependencies": {
+    "@types/aws-lambda": "^8.10.23",
     "@types/node-fetch": "^2.3.0",
-    "apollo-server": "^2.4.8",
-    "dotenv": "^7.0.0",
+    "apollo-server-lambda": "^2.4.8",
+    "aws-lambda": "^0.1.2",
     "graphql": "^14.2.1",
     "graphql-import": "^0.7.1",
     "graphql-tools": "^4.0.4",
+    "netlify-lambda": "^1.4.3",
     "node-fetch": "^2.3.0",
     "typescript": "^3.4.1"
   },
