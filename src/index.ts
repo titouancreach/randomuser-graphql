@@ -7,13 +7,16 @@ const typeDefs = gql(importSchema("src/graphql/schema.graphql"));
 
 const randomUserAPI = "https://randomuser.me/api/";
 
+interface Response {
+  results: any[]; // generate from graphql schema ?
+}
+
 const resolvers = {
   Query: {
     randomUser: async () => {
       const response = await fetch(randomUserAPI);
-      const json = await response.json();
-      const u = json.results[0];
-      return u;
+      const json = (await response.json()) as Response;
+      return json.results[0];
     }
   }
 };
