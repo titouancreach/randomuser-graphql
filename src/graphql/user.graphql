@@ -1,8 +1,3 @@
-enum Gender {
-  Male
-  Female
-}
-
 type User {
   name: Name!
   gender: String!
@@ -10,6 +5,12 @@ type User {
   location: Location!
   login: Login!
   picture: Picture!
+  dob: Dob!
+  registered: Registered!
+  phone: String!
+  cell: String!
+  id: id!
+  nat: String!
 }
 
 type Location {
@@ -38,7 +39,7 @@ type Picture {
 }
 
 type Login {
-  uuid: String!
+  uuid: ID!
   username: String!
   password: String!
   salt: String!
@@ -51,4 +52,19 @@ type Name {
   title: String!
   first: String!
   last: String!
+}
+
+type Dob {
+  date: String!
+  age: Int!
+}
+
+type Registered {
+  date: String!
+  age: Int!
+}
+
+type id {
+  name: String
+  value: String
 }
