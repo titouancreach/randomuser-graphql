@@ -1,0 +1,54 @@
+enum Gender {
+  Male
+  Female
+}
+
+type User {
+  name: Name!
+  gender: String!
+  email: String!
+  location: Location!
+  login: Login!
+  picture: Picture!
+}
+
+type Location {
+  street: String!
+  city: String!
+  state: String!
+  postcode: String!
+  coordinates: Coordinates!
+  timezone: Timezone!
+}
+
+type Timezone {
+  offset: String!
+  description: String!
+}
+
+type Coordinates {
+  latitude: String!
+  longitude: String!
+}
+
+type Picture {
+  large: String!
+  medium: String!
+  thumbnail: String!
+}
+
+type Login {
+  uuid: String!
+  username: String!
+  password: String!
+  salt: String!
+  md5: String!
+  sha1: String!
+  sha256: String!
+}
+
+type Name {
+  title: String!
+  first: String!
+  last: String!
+}
