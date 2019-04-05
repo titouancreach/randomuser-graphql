@@ -3,7 +3,6 @@ import { ApolloServer, gql } from "apollo-server";
 import { importSchema } from "graphql-import";
 import fetch from "node-fetch";
 
-import fake from "./fake.json";
 import { response } from "express";
 
 const typeDefs = gql(importSchema("src/graphql/schema.graphql"));
