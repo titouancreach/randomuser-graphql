@@ -4,7 +4,7 @@ import { importSchema } from "graphql-import";
 
 import fake from "./fake.json";
 
-const typeDefs = gql(importSchema("./src/graphql/schema.graphql"));
+const typeDefs = gql(importSchema("src/graphql/schema.graphql"));
 
 const resolvers = {
   Query: {
