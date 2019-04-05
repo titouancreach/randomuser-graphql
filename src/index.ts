@@ -1,15 +1,21 @@
 import { makeExecutableSchema } from "graphql-tools";
 import { ApolloServer, gql } from "apollo-server";
 import { importSchema } from "graphql-import";
+import fetch from "node-fetch";
 
 import fake from "./fake.json";
+import { response } from "express";
 
 const typeDefs = gql(importSchema("src/graphql/schema.graphql"));
 
+const randomUserAPI = "https://randomuser.me/api/";
+
 const resolvers = {
   Query: {
-    user: () => {
-      const u = fake.results[0];
+    randomUser: async () => {
+      const response = await fetch(randomUserAPI);
+      const json = await response.json();
+      const u = json.results[0];
       return u;
     }
   }

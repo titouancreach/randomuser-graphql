@@ -8,11 +8,13 @@
     "start": "tsc-watch --onSuccess \"node -r dotenv/config dist/index.js\""
   },
   "dependencies": {
+    "@types/node-fetch": "^2.3.0",
     "apollo-server": "^2.4.8",
     "dotenv": "^7.0.0",
     "graphql": "^14.2.1",
     "graphql-import": "^0.7.1",
     "graphql-tools": "^4.0.4",
+    "node-fetch": "^2.3.0",
     "typescript": "^3.4.1"
   },
   "devDependencies": {
