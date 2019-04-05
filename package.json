@@ -5,7 +5,9 @@
   "author": "titouancreach <titouan.creach@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "start": "tsc-watch --onSuccess \"node -r dotenv/config dist/index.js\""
+    "start": "tsc-watch --onSuccess \"node -r dotenv/config dist/index.js\"",
+    "build": "tsc",
+    "run": "node -r nodeenv/config dist/index.js"
   },
   "dependencies": {
     "@types/node-fetch": "^2.3.0",
