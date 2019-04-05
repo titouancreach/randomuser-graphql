@@ -1,6 +1,4 @@
-import { makeExecutableSchema } from "graphql-tools";
 import { ApolloServer, gql } from "apollo-server-lambda";
-import { importSchema } from "graphql-import";
 import fetch from "node-fetch";
 
 const typeDefs = gql`
