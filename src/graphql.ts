@@ -101,4 +101,4 @@ const server = new ApolloServer({
   playground: true
 });
 
-export const handler = server.createHandler();
+export const handler = server.createHandler({cors: {origin: '*'}});
