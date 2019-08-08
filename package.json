@@ -10,14 +10,15 @@
   },
   "dependencies": {
     "@types/aws-lambda": "^8.10.23",
+    "@types/graphql": "^14.2.0",
     "@types/node-fetch": "^2.3.0",
     "apollo-server-lambda": "^2.4.8",
     "aws-lambda": "^0.1.2",
+    "encoding": "^0.1.12",
     "graphql": "^14.2.1",
     "netlify-lambda": "^1.4.3",
     "node-fetch": "^2.3.0",
-    "typescript": "^3.4.1",
-    "@types/graphql": "^14.2.0",
-    "tsc-watch": "^2.1.2"
+    "tsc-watch": "^2.1.2",
+    "typescript": "^3.4.1"
   }
 }
